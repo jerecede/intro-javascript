@@ -105,7 +105,7 @@ console.log("b è magiore di A", "b" > "A");
 
 //let, dichiarazione standard, variabile che può essere riutilizzata cambiata, ridefinita con un altro tipo dato
 let pippo = 5; //assegnazione
-let pippo2 = 5*5 //prima eseguisce operazione e poi assegnazione
+let pippo2 = 5*5; //prima eseguisce operazione e poi assegnazione
 console.log(pippo);
 console.log(pippo + 2);
 pippo = "ciao";
@@ -138,7 +138,7 @@ console.log(quo);
 
 const qua = 5 ?? 6;
 console.log(qua);
-const que = false ?? 5; // || controlla solo il default invece ?? controla se c'è uno spazio vuoto
+const que = false ?? 5; // || controlla solo il boolean invece ?? controla se c'è uno spazio vuoto
 console.log(que);
 const quu = undefined ?? 5;
 console.log(quu);
