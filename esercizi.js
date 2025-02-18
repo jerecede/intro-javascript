@@ -199,7 +199,7 @@
 //     for (let j = 0; j < i+1; j++) { //stampa # fino al centro
 //         stringRow += "#";
 //     }
-//     for (let j = 0; j < numberRow-(numberRow-i); j++) { //stampa # dopo il centro
+//     for (let j = 0; j < i; j++) { //stampa # dopo il centro, formula: numberRow-(numberRow-i) --> semplificato, i
 //         stringRow += "#";
 //     }
 //     console.log(stringRow)
