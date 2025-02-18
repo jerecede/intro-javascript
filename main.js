@@ -43,13 +43,13 @@ console.log("io sono una stringa");
 console.log('io sono una stringa'); //non cambia
 console.log('io sono una "stringa"');
 console.log("l'apostrofo è importante"); //l'utilità di usarli entrambi
-console.log("\"l'apostrofo\" è importante"); // \ backslash
+console.log("\"l'apostrofo\" è importante ma anche il backslash \"\\\" non è da meno"); // \ backslash
 console.log("\"l'apostrofo\" è importante\n non ne posso fare a meno"); // \n accapo
 
 console.log(``); //alt+96
 console.log(`"l'apostrofo" è importante
     non ne posso fare a meno`); //i tab e gli accapo che fai li mostra alla console
-console.log(`la somma di 5 e 7 è ${7 + 5}`); //può fare le operazioni dentro
+console.log(`la somma di 5 e 7 è ${7 + 5}`); //può fare le operazioni dentro, interpolazione
 
 console.log('ciao a tutti' + ' ' + 'mi chiamo pippo'); //concatena le stringhe
 
