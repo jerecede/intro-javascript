@@ -99,7 +99,7 @@
 //     }
 // }
 
-//SCACCHIERA con max/2 senza Boolean con while(true) e prompt
+//SCACCHIERA con max/2 senza Boolean con while(true) e prompt, PERO MAX/2 da problemi
 
 // while (true) {
 //     let max = parseInt(prompt("inserisci la larghezza della scacchiera!"));
@@ -107,7 +107,7 @@
 //     if (isNaN(max)) {
 //         alert("sei babbo");
 //     } else {
-//         for (let y = 1; y < max + 1; y++) {
+//         for (let y = 0; y < max; y++) {
 //             for (let x = 0; x < max / 2; x++) {
 //                 if (y % 2 === 0) {
 //                     scacchiera += "# ";
@@ -127,7 +127,7 @@
 
 // let max = 8;
 // let scacchiera = "";
-// for (let y = 1; y < max+1; y++) {
+// for (let y = 0; y < max; y++) {
 //     let vf = true;
 //     for (let x = 0; x < max; x++) {
 //         if(y % 2 === 0){
@@ -155,10 +155,57 @@
 // }
 // console.log(scacchiera);
 
+//SCACCHIERA SOLUZIONE HUGO
+
+// let size = 8;
+// let stringResult = '';
+
+// for (let row = 0; row < size; row++) {
+//     let newRow = '';
+//     for (let col = 0; col < size; col++) {
+//         if (row % 2 === 0) {
+//             if (col % 2 === 0) {
+//                 newRow += ' ';
+//             } else {
+//                 newRow += '#';
+//             }
+//         } else {
+//             if (col % 2 === 0) {
+//                 newRow += '#';
+//             } else {
+//                 newRow += ' ';
+//             }
+//         }
+//     }
+//     stringResult += `${newRow}\n`
+// }
+// console.log(stringResult);
+
+//SCACCHIERA SOLUZIONE SOMMA-POSIZIONE
+
+// let size = 8;
+// let stringResult = '';
+
+// for (let row = 0; row < size; row++) {
+//     let newRow = '';
+//     for (let col = 0; col < size; col++) {
+
+//         // nota bene gli spazi finiscono sempre nelle caselle la cui somma è pari, se dispari ci sono i #
+
+//         if ((row + col) % 2 === 0) {
+//             newRow += ' ';
+//         } else {
+//             newRow += '#';
+//         }
+//     }
+//     stringResult += `${newRow}\n`
+// }
+// console.log(stringResult);
+
 // ESERCIZI PER CASA
 
 // ESERCIZIO 1
-// usando un ciclo crea una piramide come quella del primo 
+// usando un ciclo crea una piramide come quella del primo
 // esercizio del libro utilizzando solo UN console.log
 
 // let piramide = "";
@@ -171,7 +218,7 @@
 // console.log(piramide);
 
 // ESERCIZIO 2
-// usando un ciclo crea una piramide come quella del primo 
+// usando un ciclo crea una piramide come quella del primo
 // esercizio del libro ma capovolta
 
 // for (let i = 7; i > 0; i--) {
@@ -180,6 +227,10 @@
 //         piramide += "#";
 //     }
 //     console.log(piramide);
+// }
+
+// for (let i = 1; i < 7; i++) {
+//     console.log
 // }
 
 // ESERCIZIO 3
@@ -193,7 +244,7 @@
 // let numberRow = parseInt(prompt("quante righe vuoi?"));
 // for (let i = 0; i < numberRow; i++) {
 //     let stringRow = "";
-//     for (let j = 0; j < numberRow-i; j++) { //stampa gli spazi necessari fino al centro
+//     for (let j = 0; j < numberRow-i-1; j++) { //stampa gli spazi necessari fino al centro
 //         stringRow += " ";
 //     }
 //     for (let j = 0; j < i+1; j++) { //stampa # fino al centro
@@ -206,14 +257,14 @@
 // }
 
 
-// ESERCIZIO 4 
+// ESERCIZIO 4
 // usando un ciclo logga i numeri da 100 a -100
 
 // for (let i = -100; i <= 100; i++) {
 //     console.log(i);
 // }
 
-// ESERCIZIO 5 
+// ESERCIZIO 5
 // usando un ciclo logga i numeri da 1 a 100 mettendo un asterisco vicino ai multipli di 7
 
 // for (let i = 1; i <= 100; i++) {
@@ -225,7 +276,7 @@
 //     }
 // }
 
-// ESERCIZIO 6 
+// ESERCIZIO 6
 // usando un ciclo logga i numeri da 1 a 100 mettendo un asterisco vicino ai quadrati perfetti
 
 // for (let i = 1; i <= 100; i++) {
@@ -238,7 +289,7 @@
 //     }
 // }
 
-// ESERCIZIO 7 
+// ESERCIZIO 7
 // chiedi all'utente un numero (positivo) di partenza e poi logga tutti i numeri dal numero dato fino a 0
 
 // let num = parseInt(prompt("inserisci numero \( positivo plz \)"));
@@ -251,7 +302,7 @@
 //     alert("hai inserito male...");
 // }
 
-// ESERCIZIO 8 
+// ESERCIZIO 8
 // chiedi all'utente un numero (qualsiasi) di partenza e poi logga tutti i numeri dal numero dato fino a 100
 
 // let numMezzo = 100
@@ -272,7 +323,7 @@
 //     }
 // }
 
-// ESERCIZIO 9 
+// ESERCIZIO 9
 // chiedi all'utente due numeri e logga tutti i numeri pari compresi tra i numeri forniti dall'utente
 
 // let a = parseInt(prompt("inserisci primo numero"));
@@ -302,7 +353,7 @@
 //     }
 // }
 
-// ESERCIZIO 10 
+// ESERCIZIO 10
 // chiedi all'utente quanti anni ha e il suo genere e digli quante ore ha gia' vissuto e quante ore gli rimangono da vivere
 
 //chiede e controlla se gli anni sono stati inseriti bene
