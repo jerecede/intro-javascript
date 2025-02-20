@@ -256,6 +256,21 @@
 //     console.log(stringRow)
 // }
 
+// soluzione co-pilot
+
+// for (let i = 0; i < 5; i++) { // i represents the number of rows
+//     let row = "";
+//     for (let j = 0; j < 9; j++) { // j represents the total width of the row
+//         if (j < 4 - i || j > 4 + i) {
+//             row += " "; // add spaces before and after the center
+//         } else {
+//             row += "#"; // add hashes in the center
+//         }
+//     }
+//     console.log(row);
+// }
+
+
 
 // ESERCIZIO 4
 // usando un ciclo logga i numeri da 100 a -100

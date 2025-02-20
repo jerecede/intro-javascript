@@ -130,9 +130,7 @@ console.log(countChar1("Elettronica", "e"));
 console.log(countChar1("mamma", "m"));
 console.log(countChar1("kappa", 1));
 
-
 //ESERCIZIO CODE-WARS
-
 
 function replace(s) {
     let modS = "";
