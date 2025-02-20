@@ -248,21 +248,21 @@
 // console.log('reduce, sum-even-odd', arrayP9);
 
 // //versione migliorata
-// function sumEvenAndsumOdd2(arrayOfNumbers){
-//     let accumulator = [0, 0]; //sumOfEven, sumOfOdd
+function sumEvenAndsumOdd2(arrayOfNumbers){
+    let accumulator = [0, 0]; //sumOfEven, sumOfOdd
 
-//     for (let i = 0; i < arrayOfNumbers.length; i++) {
-//         const element = arrayOfNumbers[i];
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        const element = arrayOfNumbers[i];
         
-//         if(element % 2 === 0){
-//             accumulator[0] += element;
-//         } else {
-//             accumulator[1] += element;
-//         }
-//     }
+        if(element % 2 === 0){
+            accumulator[0] += element;
+        } else {
+            accumulator[1] += element;
+        }
+    }
 
-//     return accumulator;
-// }
+    return accumulator;
+}
 
 // const arrayP10 = sumEvenAndsumOdd2(arrayP);
 // console.log('reduce, sum-even-odd 2', arrayP10);
