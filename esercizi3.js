@@ -1,3 +1,5 @@
+//come chiamarae funzioni, find per trovare solo una cosa, filter per varie cose
+
 const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 
 // ESERCIZIO 1
@@ -21,7 +23,7 @@ const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 // ESERCIZIO 2
 // convertire in gradi fahrenheit ipotizando che l'unita di partenza sia celsius
 
-// function convertCelToFahr(array) {
+// function celsiusToFahr(array) {
 //     const newArray = []
     
 //     for (let i = 0; i < array.length; i++) {
@@ -34,7 +36,7 @@ const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 //     return newArray;
 
 // }
-// const arrayP = convertCelToFahr(array1);
+// const arrayP = celsiusToFahr(array1);
 // console.log(arrayP);
 
 // ESERCIZIO 3
@@ -42,14 +44,14 @@ const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 
 // function mediaArray(array) {
 
-//     let somma = 0;
+//     let media = 0;
 
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//         somma = somma + element;
+//         media = media + element;
 
 //     }
-//     const media = somma / array.length;
+//     media = media / array.length;
 //     return media;
 
 // }
@@ -61,24 +63,18 @@ const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 
 // function findMaxMinArray(array) {
 
-//     let maxAndMin = [0, 0];
-//     let maxElement = -Infinity;
-//     let minElement = Infinity;
+//     let maxAndMin = [infinity, -infinity]; // min, max
 
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//         if (element > maxElement) {
-//             maxElement = element;
+//         if (element > maxAndMin[1]) {
+//             maxAndMin[1] = element;
 //         }
-//         if (element < minElement) {
-//             minElement = element;
-//         }
-        
-        
-
+//         if (element < maxAndMin[0]) {
+//             maxAndMin[0] = element;
+//         }     
 //     }
-//     maxAndMin[0] = maxElement;
-//     maxAndMin[1] = minElement
+//     maxAndMin.push(maxElement, minElement);
 //     return maxAndMin;
 // }
 // const arrayP = findMaxMinArray(array1);
@@ -107,17 +103,19 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 // ESERCIZIO 6
 // traformare tutte le stringe in maiuscolo
 
-// function stringUpperCase(array) {
+// function arrayToUpper(array) {
 //     const newArray = [];
 
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//             let stringUpperCase = element.toUpperCase()
-//             newArray.push(stringUpperCase);
+
+//         const stringUpper = element.toUpperCase();
+//         newArray.push(stringUpper);
 //     }
+
 //     return newArray;
 // }
-// const arrayP = stringUpperCase(array2);
+// const arrayP = arrayToUpper(array2);
 // console.log(arrayP);
 
 // ESERCIZIO 7
@@ -128,8 +126,8 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
     
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//         let stringUpperCase = element.charAt(0).toUpperCase() + element.slice(1);
-//         newArray.push(stringUpperCase)
+//         let newString = element.charAt(0).toUpperCase() + element.slice(1);
+//         newArray.push(newString); //le string sono immutbaile, non puoi fare string[0] = string[0].toUpperCase
 //     }
     
 //     return newArray;
@@ -139,20 +137,21 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 // console.log(arrayP);
 
 // ESERCIZIO 8
-// restiture una stringa composta dalle iniziali delle parole
+// restituire una stringa composta dalle iniziali delle parole
 
 // function arrayFirstLetter(array) {
-//     const newArray = [];
+//     const newString = "";
 
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//         let stringUpperCase = element.charAt(0);
-//         newArray.push(stringUpperCase);
+//         let initial = element.charAt(0);
+//         newString += initial;
 //     }
 
-//     return newArray;
+//     return newString;
 
 // }
+
 // const arrayP = arrayFirstLetter(array2);
 // console.log(array2);
 // console.log(arrayP);
@@ -175,9 +174,10 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 // console.log(array2);
 // console.log(arrayP);
 
-//10) eliminare le vocali dalle stringhe
+//ESERCIZIO 10
+//eliminare le vocali dalle stringhe
 
-// function removeAllVocals(array) {
+// function removeAllVowels(array) {
 //     let newArray = [];
 //     for (i = 0; i < array.length; i++) {
 //         let stringElement = array[i];
@@ -205,7 +205,34 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 //     return newArray;
 // }
 
-// const arrayP = removeAllVocals(array2);
+//soluzione lorenzo
+
+// function removeVowels(array) {
+
+//     const vowels = "aeiou";
+//     let newString = [];
+
+//     for (let i = 0; i < array.length; i++) {
+
+//         let element = array[i];
+//         let elementNoVowels = "";
+
+//         for (let j = 0; j < element.length; j++) {
+
+//             let char = element[j]; //c'è anche charAt()
+
+//             if(!vowels.includes(char.toLowerCase())){
+//                 elementNoVowels += char;
+//             }
+//         }
+
+//         newString.push(elementNoVowels)
+//     }
+
+//     return newString
+// }
+
+// const arrayP = removeVowels(array2);
 // console.log(array2);
 // console.log(arrayP);
 
@@ -232,15 +259,15 @@ const array3 = [[1,2,3], [3,2,1,0], [0,0,0,0,0]];
 //ESERCIZIO 12
 //restituire un array di numeri che sono le lunghezze dei sigoli array
 
-function getSizeArraysOfArray(array) {
-    let newArray = [];
-    for (i = 0; i < array.length; i++) {
-        let arrayElement = array[i];
-        let sizeArrayElement = arrayElement.length;
-        newArray.push(sizeArrayElement);
-    }
-    return newArray;
-}
+// function getSizeArraysOfArray(array) {
+//     let newArray = [];
+//     for (i = 0; i < array.length; i++) {
+//         let arrayElement = array[i];
+//         let sizeArrayElement = arrayElement.length;
+//         newArray.push(sizeArrayElement);
+//     }
+//     return newArray;
+// }
 
 // const arrayP = getSizeArraysOfArray(array3);
 // console.log(array3);
@@ -250,16 +277,33 @@ function getSizeArraysOfArray(array) {
 //sommare tutti i numeri in tutti gli array
 
 // function sumAllNumbersOfArrays(array) {
-//     let somma = 0;
+//     let accumulator = 0;
+
 //     for (i = 0; i < array.length; i++) {
 //         const arrayElement = array[i];
 
 //         for (let j = 0; j < arrayElement.length; j++) {
-//             somma += arrayElement[j];
+//             const number = arrayElement[j];
+//             accumulator += number;
 //         }
 //     }
-//     return somma;
+//     return accumulator;
 // }
+
+// //hugo soluzione con forof
+
+// function sumAllNumbersOfArrays2(array) {
+//     let accumulator = 0;
+
+//     for (const arrayElement of array) {
+//         for (const number of arrayElement) {
+//             accumulator += number
+//         }
+//     }
+
+//     return accumulator;
+// }
+
 
 // const arrayP = sumAllNumbersOfArrays(array3);
 // console.log(array3);
@@ -289,7 +333,7 @@ function getSizeArraysOfArray(array) {
 //sommare tutti i numeri con indice uguale e restituire un array di risultati, ho usato tre funzioni x_x
 
 // function getMaxLengthArray(array) {
-//     let maxLength = -Infinity;
+//     let maxLength = 0;
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
 //         if(element.length > maxLength){
