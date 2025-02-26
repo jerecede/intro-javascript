@@ -182,3 +182,6 @@ console.log(arrayp17);
 
 const arrayp18 = testArray2.reduce((a, c) => a + c, ""); // a = accumulator, c = current
 console.log(arrayp18);
+
+const arrayp19 = testArray.reduce((a, c) => a * c, 1);
+console.log(arrayp19);
