@@ -1,4 +1,4 @@
-//come chiamarae funzioni, find per trovare solo una cosa, filter per varie cose
+//come chiamare funzioni, find per trovare solo una cosa, filter per varie cose
 
 const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 

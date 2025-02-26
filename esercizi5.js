@@ -1,16 +1,81 @@
 const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 
+function genericMap(array, mappingFunction) { //array anche di non numeri, e una funzione come parametro
+    let newArray = [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const newElement = mappingFunction(element, i, array);
+        newArray.push(newElement);
+    }
+
+    return newArray;
+}
+
+function genericFilter(array, filteringFunction) {
+    let newArray = [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (filteringFunction(element, i, array)) {
+            newArray.push(element);
+        }
+    }
+
+    return newArray;
+}
+
+function genericReduce(array, reducingFunction, startingAccumulator){
+    let accumulator = startingAccumulator;
+
+    for (let i = 0; i < array.length; i++) {
+        const current = array[i];
+
+        accumulator = reducingFunction(accumulator, current, i, array);
+    }
+
+    return accumulator;
+}
+
 // ESERCIZIO 1 (FILTER)
 // filtrare tutti i numeri minori o uguali a zero
+
+const keepBiggerThanZero = value => value > 0;
+const genericNumbersBiggerThanZero = genericFilter(array1, keepBiggerThanZero);
+
+const numbersBiggerThanZero = array1.filter(value => value > 0)
+
+// console.log(numbersBiggerThanZero);
+
  
 // ESERCIZIO 2 (MAP)
 // convertire in gradi fahrenheit ipotizando che l'unita di partenza sia celsius
 
+const celToFahFntc = value => (value * (9/5)) + 32;
+const genericFahDegrees = genericMap(array1, celToFahFntc);
+
+const fahDegrees = array1.map(value => (value * (9/5)) + 32);
+
+// console.log(fahDegrees);
+
 // ESERCIZIO 3 (REDUCE)
 // fare la media dei valori
 
+const meanFnct = (acc,curr,_,array) => (acc + (curr/array.length));
+const genericMeanResult = genericReduce(array1, meanFnct, 0);
+
+const meanResult = array1.reduce((acc,curr,_,array) => (acc + (curr/array.length)), 0)
+
+// console.log(meanResult);
+
 // ESERCIZIO 4 (REDUCE)
 // restituire il valore più basso e il più alto
+
+const maxMinFnct = (acc,curr) => ;
+const genericMaxMin = genericReduce(array1, maxMinFnct, [infinity, -infinity]);
+
+const maxMin = array1.reduce(maxMinFnct, [infinity, -infinity])
 
 const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella', 'minnie'];
 
