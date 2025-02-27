@@ -178,10 +178,42 @@ const arrayp14 = array3.reduce((acc, curr) => acc + curr.length, 0);
 console.log(arrayp14);
 
 //ESERCIZIO 15 (REDUCE)
-//sommare tutti i numeri con indice uguale e restituire un array di risultati, ho usato tre funzioni x_x
+//sommare tutti i numeri con indice uguale e restituire un array di risultati x_x
 
-const sumSameIndexFnct = (acc,curr,i,array) => {
-};
-const arrayp15 = array3.reduce(sumSameIndexFnct, []);
+//funzione da cui convertire in reduce function
+function sumAllEqualIndex(arrayOfArrays) {
+    const newArray = [];
+
+    for (let i = 0; i < arrayOfArrays.length; i++) {
+        const array = arrayOfArrays[i];
+
+        for (let j = 0; j < array.length; j++) {
+            const number = array[j];
+            if(newArray[j]){
+                newArray[j] = newArray[j] + number;
+            } else{
+                newArray[j] = number;
+            }
+        }
+    }
+
+    return newArray;
+}
+
+console.log(sumAllEqualIndex(array3));
+
+//soluzione reduce
+
+const arrayp15 = array3.reduce((a, c) => { //current è un array
+    for (let j = 0; j < c.length; j++) {
+        const number = c[j];
+        if(a[j]){
+            a[j] = a[j] + number;
+        } else{
+            a[j] = number;
+        }
+    }
+    return a;
+}, []);
 
 console.log(arrayp15);
