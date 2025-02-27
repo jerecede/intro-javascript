@@ -233,12 +233,23 @@ console.log(testArray);
 testArray.sort(sortingFunctionAsc)
 console.log(testArray);
 
-testArray.sort((f, s) => f - s); //crescente
+testArray.sort((f, s) => f - s); //crescente numeri
 console.log(testArray);
-testArray.sort((f, s) => s - f); //decrescente
+testArray.sort((f, s) => s - f); //decrescente numeri
 console.log(testArray);
 
-testArray2.sort((fStr, sStr) => fStr.localeCompare(sStr)); //localeCompare vede com'è l'ordinamento alfabetico del luogo
+//localeCompare vede com'è l'ordinamento alfabetico del luogo
+testArray2.sort((fStr, sStr) => fStr.localeCompare(sStr)); // A - Z
 console.log(testArray2);
-testArray2.sort((fStr, sStr) => sStr.localeCompare(fStr));
+testArray2.sort((fStr, sStr) => sStr.localeCompare(fStr)); // Z - A
 console.log(testArray2);
+
+function betterSorter(array, sortingFunction){ //ordinare l'array in un altro array, senza modificare l'originale
+    const newArray = [...array];
+    newArray.sort(sortingFunction)
+    return newArray;
+}
+
+const arrayp20 = betterSorter(testArray2, (fStr, sStr) => fStr.localeCompare(sStr));
+console.log(testArray2);
+console.log(arrayp20);
