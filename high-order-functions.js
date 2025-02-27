@@ -185,3 +185,60 @@ console.log(arrayp18);
 
 const arrayp19 = testArray.reduce((a, c) => a * c, 1);
 console.log(arrayp19);
+
+//FUNZIONE FIND (kinda filter)
+
+function isEven2(numb) {
+    return numb % 2 === 0;
+}
+
+console.log(testArray.filter(isEven)); //return tutti i pari
+console.log(testArray.find(isEven)); //return il primo pari che trova
+
+//FUNZIONE SOME
+
+console.log(testArray.some(isEven)); //return boolean, c'è uno pari? findsome
+
+//FUNZIONE EVERY
+
+console.log(testArray.every(isEven)); //return boolean, sono tutti pari? findeveryù
+
+//FUNZIONE SORT, prende come base l'ascii per ordinare
+
+testArray.sort()
+console.log(testArray);
+
+function sortingFunctionAsc(first, second){
+    if (first < second) {
+        return 1;
+    } else if (first > second) {
+        return -1
+    } else {
+        return 0;
+    }
+}
+
+function sortingFunctionDesc(first, second){
+    if (first > second) {
+        return 1;
+    } else if (first < second) {
+        return -1
+    } else {
+        return 0;
+    }
+}
+
+testArray.sort(sortingFunctionDesc)
+console.log(testArray);
+testArray.sort(sortingFunctionAsc)
+console.log(testArray);
+
+testArray.sort((f, s) => f - s); //crescente
+console.log(testArray);
+testArray.sort((f, s) => s - f); //decrescente
+console.log(testArray);
+
+testArray2.sort((fStr, sStr) => fStr.localeCompare(sStr)); //localeCompare vede com'è l'ordinamento alfabetico del luogo
+console.log(testArray2);
+testArray2.sort((fStr, sStr) => sStr.localeCompare(fStr));
+console.log(testArray2);
