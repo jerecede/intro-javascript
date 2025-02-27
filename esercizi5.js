@@ -217,3 +217,15 @@ const arrayp15 = array3.reduce((a, c) => { //current è un array
 }, []);
 
 console.log(arrayp15);
+
+// const arrayp16 = array3.reduce((a, c) => {
+//     a = c.map((num,i) => {
+//         let newNumber = num;
+//         if(a[i]){
+//             newNumber = newNumber + a[i];
+//         }
+//         return newNumber
+//     })
+// }, []);
+
+// console.log(arrayp16);
