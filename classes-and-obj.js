@@ -202,78 +202,86 @@
 // console.log(Circle.PI);
 // console.log(circle2.calculateA());
 
-// class Math2 {
+class Math2 {
 
-//     static sum(n1, n2){
-//         return n1 + n2;
-//     }
+/**
+ * The function "sum" takes two numbers as input and returns their sum.
+ * @param {number} n1 - The parameter `n1` is the first number that will be used in the `sum` function to
+ * perform addition.
+ * @param {number} n2 - The parameter `n2` is the second number that will be added to `n1` in the `sum`
+ * function.
+ * @returns {number} The `sum` function is returning the sum of `n1` and `n2`.
+ */
+    static sum(n1, n2){
+        return n1 + n2;
+    }
 
-//     static absolute(n){
-//         if(n >= 0){
-//            return n;
-//         }
-//         return n * -1;
-//     }
+    static absolute(n){
+        if(n >= 0){
+           return n;
+        }
+        return n * -1;
+    }
 
-//     static cube(n){
-//         return n ** 3;
-//     }
-// }
+    static cube(n){
+        return n ** 3;
+    }
+}
 
-// console.log(Math2.cube(5));
-// console.log(Math2.sum(Math2.cube(-5), Math2.cube(Math2.absolute(-3))));
+console.log(Math2.cube(5));
+console.log(Math2.sum(Math2.cube(-5), Math2.cube(Math2.absolute(-3))));
 
 //POLIMORFISMO
 
-class Animal {
+// class Animal {
 
-    constructor(name) {
-        this.name = name;
-    }
+//     constructor(name) {
+//         this.name = name;
+//     }
 
-    sayName(){
-        return `I'm ${this.name}`;
-    }
+//     sayName(){
+//         return `I'm ${this.name}`;
+//     }
 
-    speak(){
-        return '?';
-    }
+//     speak(){
+//         return '?';
+//     }
 
-}
+// }
 
-class Dog extends Animal {
+// class Dog extends Animal {
 
-    constructor(name) {
-        super(name);
-    }
+//     constructor(name) {
+//         super(name);
+//     }
 
-    speak(){
-        return 'bau bau bau';
-    }
-}
+//     speak(){
+//         return 'bau bau bau';
+//     }
+// }
 
-class Cat extends Animal {
+// class Cat extends Animal {
 
-    constructor(name) {
-        super(name);
-    }
+//     constructor(name) {
+//         super(name);
+//     }
 
-    speak(){
-        return 'miao miao miao';
-    }
-}
+//     speak(){
+//         return 'miao miao miao';
+//     }
+// }
 
-const cat1 = new Cat('laura');
-const cat2 = new Cat('lorenzo');
-const dog1 = new Dog('giovanni');
-const dog2 = new Dog('jan');
-const cat3 = new Cat('hugo');
-const cat4 = new Cat('eusebio');
-const cat5 = new Cat('jeremias');
+// const cat1 = new Cat('laura');
+// const cat2 = new Cat('lorenzo');
+// const dog1 = new Dog('giovanni');
+// const dog2 = new Dog('jan');
+// const cat3 = new Cat('hugo');
+// const cat4 = new Cat('eusebio');
+// const cat5 = new Cat('jeremias');
 
-const animals = [cat1, cat2, dog1, dog2, cat3, cat4, cat5]; //ci sono tipi diversi, ma diventano tutti animals
+// const animals = [cat1, cat2, dog1, dog2, cat3, cat4, cat5]; //ci sono tipi diversi, ma diventano tutti animals
 
-for (let i = 0; i < animals.length; i++) { //ma qui diventano ritornano quello che sono, cat e dog
-    const animal = animals[i];
-    console.log(animal.sayName() + ' ' + animal.speak());
-}
+// for (let i = 0; i < animals.length; i++) { //ma qui diventano ritornano quello che sono, cat e dog
+//     const animal = animals[i];
+//     console.log(animal.sayName() + ' ' + animal.speak());
+// }
