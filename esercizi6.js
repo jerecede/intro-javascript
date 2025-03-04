@@ -75,7 +75,7 @@ nazionalità:${this.nationality}`
 
 //     toString() {
 //         const principalStr = `${super.toString()}
-//         scuola: ${this.school}`
+//scuola: ${this.school}`
 //         return principalStr;
 //     }
 // }
@@ -119,7 +119,7 @@ nazionalità:${this.nationality}`
 
 //     toString() {
 //         let studentStr = `${super.toString()}
-//         media voti:${this.calculateMean()}`
+//media voti:${this.calculateMean()}`
 //         return studentStr;
 //     }
 
@@ -175,8 +175,8 @@ nazionalità:${this.nationality}`
 
 //     toString() {
 //         const teacherStr = `${super.toString()}
-//         materia: ${this.subject}
-//         numero di studenti:${this.students.length}`
+//materia: ${this.subject}
+//numero di studenti:${this.students.length}`
 //         return teacherStr;
 //     }
 
@@ -204,7 +204,7 @@ nazionalità:${this.nationality}`
 
 // const teachers = [teacher1, teacher2, teacher3];
 
-// const principal = new Principal('Pippo', 'de topolini', '1958', 'top', 'm', 'Italo Topino', teachers);
+// const principal = new Principal('pippo', 'de topolini', '1958', 'top', 'm', 'Italo Topino', teachers);
 
 // console.log(teacher1.toString());
 // console.log(teacher1.bestStudent());
