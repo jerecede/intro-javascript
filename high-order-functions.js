@@ -201,7 +201,7 @@ console.log(testArray.some(isEven)); //return boolean, c'è uno pari? findsome
 
 //FUNZIONE EVERY
 
-console.log(testArray.every(isEven)); //return boolean, sono tutti pari? findeveryù
+console.log(testArray.every(isEven)); //return boolean, sono tutti pari? findevery
 
 //FUNZIONE SORT, prende come base l'ascii per ordinare
 
