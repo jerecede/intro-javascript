@@ -36,50 +36,6 @@ nazionalità:${this.nationality}`
 
 }
 
-// class Principal extends Human {
-//     constructor(name, surname, yob, nationality, gender, school, teachers = []) {
-//         super(name, surname, yob, nationality, gender)
-//         this.school = school;
-//         this.teachers = teachers
-//     }
-
-//     bestTeacher() {
-//         let bestTeacher = this.teachers[0];
-
-//         for (let i = 1; i < this.teachers.length; i++) {
-//             const currentTeacher = this.teachers[i];
-//             if (currentTeacher.calculateStudentsMean() > bestTeacher.calculateStudentsMean()) {
-//                 bestTeacher = currentTeacher;
-//             }
-//         }
-//         return bestTeacher;
-//     }
-
-//     bestStudent() {
-//         let bestMean = -1;
-//         let bestStudent = {};
-
-//         for (const teacher of this.teachers) {
-//             const student = teacher.bestStudent();
-//             const mean = student.calculateMean();
-//             console.log(student);
-//             console.log(mean);
-//             if(mean > bestMean){
-//                 bestStudent = student;
-//                 bestMean = mean;
-//             }
-//         }
-
-//         return bestStudent;
-//     }
-
-//     toString() {
-//         const principalStr = `${super.toString()}
-//scuola: ${this.school}`
-//         return principalStr;
-//     }
-// }
-
 // class Student extends Human {
 
 //     constructor(name, surname, yob, nationality, gender, marks = []) {
@@ -180,6 +136,50 @@ nazionalità:${this.nationality}`
 //         return teacherStr;
 //     }
 
+// }
+
+// class Principal extends Human {
+//     constructor(name, surname, yob, nationality, gender, school, teachers = []) {
+//         super(name, surname, yob, nationality, gender)
+//         this.school = school;
+//         this.teachers = teachers
+//     }
+
+//     bestTeacher() {
+//         let bestTeacher = this.teachers[0];
+
+//         for (let i = 1; i < this.teachers.length; i++) {
+//             const currentTeacher = this.teachers[i];
+//             if (currentTeacher.calculateStudentsMean() > bestTeacher.calculateStudentsMean()) {
+//                 bestTeacher = currentTeacher;
+//             }
+//         }
+//         return bestTeacher;
+//     }
+
+//     bestStudent() {
+//         let bestMean = -1;
+//         let bestStudent = {};
+
+//         for (const teacher of this.teachers) {
+//             const student = teacher.bestStudent();
+//             const mean = student.calculateMean();
+//             console.log(student);
+//             console.log(mean);
+//             if(mean > bestMean){
+//                 bestStudent = student;
+//                 bestMean = mean;
+//             }
+//         }
+
+//         return bestStudent;
+//     }
+
+//     toString() {
+//         const principalStr = `${super.toString()}
+//scuola: ${this.school}`
+//         return principalStr;
+//     }
 // }
 
 // const student1 = new Student('laura', 'mazza', '1984', 'it', 'f', [8, 7]);
